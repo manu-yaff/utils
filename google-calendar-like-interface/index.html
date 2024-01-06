@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Calendar like interface</title>
+    <style>
+      .hour {
+        height: 30px;
+        width: 160px;
+        border: solid 1px black;
+        text-align: center;
+      }
+
+      .grid-container {
+        display: flex;
+        gap: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div id="hours-1">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-2">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-3">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-4">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-5">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-6">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+      <div id="hours-7">
+        <div class="hour">1</div>
+        <div class="hour">2</div>
+        <div class="hour">3</div>
+        <div class="hour">4</div>
+        <div class="hour">5</div>
+        <div class="hour">7</div>
+        <div class="hour">8</div>
+        <div class="hour">9</div>
+        <div class="hour">10</div>
+        <div class="hour">11</div>
+        <div class="hour">12</div>
+        <div class="hour">13</div>
+        <div class="hour">14</div>
+        <div class="hour">15</div>
+        <div class="hour">16</div>
+        <div class="hour">17</div>
+        <div class="hour">18</div>
+        <div class="hour">19</div>
+        <div class="hour">20</div>
+      </div>
+    </div>
+
+    <script>
+      var dragging;
+      var initialYCoordinate;
+      var initialBox;
+      var initialColumn;
+
+      document.querySelectorAll('.hour').forEach(function addMouseDownEvent(box) {
+        box.addEventListener('mousedown', function handleInitialClick(event) {
+          event.preventDefault();
+
+          dragging = true;
+          initialYCoordinate = event.pageY; // y coordinate where the click happened
+          initialBox = box;
+          initialColumn = box.parentElement;
+          document.querySelector('body').style.cursor = 'move';
+        });
+      });
+
+      document.addEventListener('mouseup', function stopDragging(event) {
+        event.preventDefault();
+        dragging = false;
+        document.querySelector('body').style.cursor = '';
+      });
+
+      function isBoxBelowInitialY(box) {
+        var top = box.offsetTop;
+        var bottom = top + box.offsetHeight;
+
+        return top > initialYCoordinate;
+      }
+
+      function isInitialBox(box) {
+        var top = box.offsetTop;
+        var bottom = top + box.offsetHeight;
+
+        return initialBox.offsetTop == top && initialBox.offsetTop + box.offsetHeight === bottom;
+      }
+
+      function hasBoxBeenIntersected(box, currentY) {
+        var top = box.offsetTop;
+
+        return currentY >= top;
+      }
+
+      function isAboveInitialY(box) {
+        var top = box.offsetTop;
+        var bottom = top + box.offsetHeight;
+
+        return bottom < initialYCoordinate;
+      }
+
+      function hasBeenIntersectedUp(box, currentY) {
+        var top = box.offsetTop;
+        var bottom = top + box.offsetHeight;
+
+        return currentY < bottom;
+      }
+
+      var direction;
+
+      document.addEventListener('mousemove', function handleMouseMove(event) {
+        var currentY = event.pageY;
+        direction = currentY >= initialYCoordinate ? 'down' : 'up';
+
+        if (dragging) {
+          document
+            .querySelectorAll(`#${initialColumn.id} .hour`)
+            .forEach(function setBoxBackground(box) {
+              if (
+                (direction === 'down' && isInitialBox(box)) ||
+                (direction === 'down' &&
+                  isBoxBelowInitialY(box) &&
+                  hasBoxBeenIntersected(box, currentY))
+              ) {
+                box.style.backgroundColor = 'red';
+              } else if (
+                (direction === 'up' && isInitialBox(box)) ||
+                (direction === 'up' && isAboveInitialY(box) && hasBeenIntersectedUp(box, currentY))
+              ) {
+                box.style.backgroundColor = 'red';
+              } else {
+                box.style.backgroundColor = 'white';
+              }
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
