@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div {
+        height: 90vh;
+      }
+
+      .side-menu {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+
+        li {
+          list-style: none;
+          padding: 0;
+          margin: 24px 0;
+        }
+      }
+
+      .active {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: #ccdbdc" id="section-1-content">Section 1</div>
+    <div style="background: #80ced7" id="section-2-content">Section 2</div>
+    <div style="background-color: #63c7b2" id="section-3-content">Section 3</div>
+    <div style="background-color: #8e6c88" id="section-4-content">Section 4</div>
+    <div style="background-color: #263d42" id="section-5-content">Section 5</div>
+
+    <ul class="side-menu">
+      <li id="section-1-title">Section 1</li>
+      <li id="section-2-title">Section 2</li>
+      <li id="section-3-title">Section 3</li>
+      <li id="section-4-title">Section 4</li>
+      <li id="section-5-title">Section 5</li>
+    </ul>
+
+    <script>
+      function setCurrentSection(entry) {
+        var element = entry.target;
+        var sectionTitleId = element.id.split('-')[1];
+
+        if (entry.isIntersecting) {
+          console.log(entry.intersectionRatio);
+          document.querySelector('.active')?.classList.remove('active');
+          document.querySelector(`#section-${sectionTitleId}-title`).classList.add('active');
+        }
+      }
+
+      function onIntersecting(entries) {
+        entries.forEach(setCurrentSection);
+      }
+
+      function navigateToSection(event) {
+        var menuTitle = event.target;
+        var targetId = `section-${menuTitle.id.split('-')[1]}-content`;
+        var targetSection = document.getElementById(targetId);
+
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      function addListenerToNavigate(menuTitle) {
+        menuTitle.addEventListener('click', navigateToSection);
+      }
+
+      var sections = document.querySelectorAll('div');
+      var menuTitles = document.querySelectorAll('li');
+
+      var observer = new IntersectionObserver(onIntersecting, {
+        threshold: 1,
+      });
+
+      sections.forEach(function observeSection(section) {
+        observer.observe(section);
+      });
+
+      menuTitles.forEach(addListenerToNavigate);
+    </script>
+  </body>
+</html>
